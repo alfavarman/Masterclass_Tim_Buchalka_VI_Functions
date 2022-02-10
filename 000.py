@@ -10,7 +10,6 @@ def fibbonaci_numbers(n):
         return n
 
     n_minus1,n_minus2, = 1, 0
-
     for f in range(n -1):
         fn = n_minus1 + n_minus2
         print(fn)

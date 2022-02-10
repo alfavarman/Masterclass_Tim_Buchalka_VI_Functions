@@ -1,10 +1,10 @@
-def fibbonaci_numbers(n):
+def fibonacci_numbers(n=100):
     """
-    function fibbonaci numbers - sequence of numbers where
-    fn = fn-1 + fn-2.
-    :param range_s: start of range
-    :param range_e: end of range
-    :return: fibbonaci numbers within user's range
+    provide fibonacci numbers for n' range.
+    n must be positive int. default n is 100.
+    NOTE fibonacci n = 10 is 55. N is range of indexes.
+    :param n is range for which fibonacci numbers are calculated
+    :return: fibonacci numbers for n' range
     """
     if 0 <= n <= 1:
         return n
@@ -16,4 +16,4 @@ def fibbonaci_numbers(n):
         n_minus2 = n_minus1
         n_minus1 = fn
 
-print(fibbonaci_numbers(100))
+print(fibonacci_numbers(10))

@@ -6,22 +6,36 @@
 # remeber to include 2 asterix on each side
 
 
-def banner(text, screen_width):
-    #screen_width = 80
+def banner(text="", screen_width=80, design="*"):
+    """
+    Printed Banner is created around `text`, in defined `screen_width`
+    `design` ed character.
+    NOTE each line is separate. Can't use \"""\"""
+    :param text: string to be printed, default len 76 characters
+    :param screen_width: default is 80
+    :param design: default is '*'
+    :return:
+    """
     if len(text) > screen_width - 4:
-        print("Nah! max 80 char per line,\n"
-              "please use big_banner(str) function")
-    elif text == '*':
-        print('*' * screen_width)
+        print("Nah! max {0} char per line,\n"
+              "please use big_banner(str) function".format(screen_width))
+    elif text == design:
+        print(design * screen_width)
     else:
-        print('**{0}**'.format(text.center(screen_width - 4)))
+        print('{0}{0}{1}{0}{0}'.format(design, text.center(screen_width - 4)))
 
 
-banner('*', 80)
-banner('today I learn python', 80)
-banner('tomorrow I apply for job', 80)
-banner('day after Yoy blowjob :D', 80)
-banner('*', 80)
-banner(' ', 80)
-banner('Rika needs Chares', 80)
+banner("#", 60, "#")
+banner('', 60,  "#")
+banner('today I learn python', 60,  "#")
+banner('tomorrow I apply for job', 60,  "#")
+banner('day after Yoy blowjob :D', 60,  "#")
+banner('*', 60,  "#")
+banner('')
+banner('Rika needs Chares', 60,  "#")
+banner("""
+jsks
+ksk
+ks
+""")
 #banner('************************************************************************************')

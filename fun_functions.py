@@ -1,9 +1,10 @@
-def fibonacci_numbers(n=100):
+def fibonacci_numbers(n: int) -> int:
     """
     return fibonacci numbers for n' range.
     n must be positive int. default n is 100.
     NOTE fibonacci n = 10 is 55. N is range of indexes.
-    :param n is range of fibonacci indexes
+
+    :param n: int is range for which fibonacci numbers are calculated
     :return: fibonacci numbers for n' range
     """
     if 0 <= n <= 1:
@@ -32,19 +33,18 @@ def multiply(x: float, y: float) -> float:
     :param y:
     :return: product of `x` and `y`.
     """
-
     result = x * y
     return result
 
 
-def banner(text="", screen_width=80, design="*"):
+def banner(text: str = "", screen_width: int = 80, design: str = "*") -> None:
     """
     Printed Banner is created around `text`, in defined `screen_width`
     `design` ed character.
     NOTE each line is separate. Can't use \"""\"""
     :param text: string to be printed, default len 76 characters
-    :param screen_width: default is 80
-    :param design: default is '*'
+    :param screen_width: int default is 80
+    :param design: str default is '*'
     :return:
     """
     if len(text) > screen_width - 4:
@@ -54,5 +54,32 @@ def banner(text="", screen_width=80, design="*"):
         print(design * screen_width)
     else:
         print('{0}{0}{1}{0}{0}'.format(design, text.center(screen_width - 4)))
+
+
+def is_palindrome(string: str) -> bool:
+    """
+    Validate the string to be palindrome.
+    ignores lower upper case
+
+    :param string: str of characters
+    :return: bool value True for str is palindrome
+    """
+    return string[::-1].casefold() == string.casefold()
+
+
+def is_palindrome_sentence(string: str) -> bool:
+    """
+    Validate sentence to be a palindrome.
+    ignores lower upper case, punctuation, whitespaces,
+    and nums
+
+    :param string: any string at any length
+    :return: bool value of True for palindrome
+    """
+    sent = ''
+    for char in string:
+        if char.isalnum():
+            sent += char
+    return sent[::-1].casefold() == sent.casefold()
 
 

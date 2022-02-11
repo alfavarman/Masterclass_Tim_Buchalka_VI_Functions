@@ -6,14 +6,14 @@
 # remeber to include 2 asterix on each side
 
 
-def banner(text="", screen_width=80, design="*"):
+def banner(text: str = "", screen_width: int = 80, design: str = "*") -> None:
     """
     Printed Banner is created around `text`, in defined `screen_width`
     `design` ed character.
     NOTE each line is separate. Can't use \"""\"""
     :param text: string to be printed, default len 76 characters
-    :param screen_width: default is 80
-    :param design: default is '*'
+    :param screen_width: int default is 80
+    :param design: str default is '*'
     :return:
     """
     if len(text) > screen_width - 4:

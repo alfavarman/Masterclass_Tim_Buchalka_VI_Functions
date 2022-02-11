@@ -26,28 +26,29 @@ def fizz_buzz(number: int) -> str:
         return str(number)
 
 
-for i in range(1, 100):
-    answer = input("For {} fizz, buzz, fizz buzz or {}?: "
-                   .format(i, i))
-    if answer != fizz_buzz(i):
-        print("Wrong! For {} correct is {}"
-              .format(i, fizz_buzz(i)))
-        break
-    else:
-        print("Congrats! Try Again:")
-
-
-
-#   Computer Guess with Player
-# guess = 0
-# while guess < 101:
-#     guess += 1
-#     print(fizz_buzz(guess))
-#     guess += 1
-#     correct_answer = fizz_buzz(guess)
-#     player_guess = input("fizz, buzz, fizz buzz, or number: ")
-#     if player_guess != fizz_buzz(guess):
-#         print("Wrong!! it should be {}".format(fizz_buzz(guess)))
+#       Computer Asks Player Fizz Buzz etc
+# for i in range(1, 100):
+#     answer = input("For {} fizz, buzz, fizz buzz or {}?: "
+#                    .format(i, i))
+#     if answer != fizz_buzz(i):
+#         print("Wrong! For {} correct is {}"
+#               .format(i, fizz_buzz(i)))
 #         break
-# else:
-#     print("Congrats! You are sharp!")
+#     else:
+#         print("Congrats! Try Again:")
+
+
+
+#       Computer Guess with Player
+guess = 0
+while guess < 101:
+    guess += 1
+    print(fizz_buzz(guess))
+    guess += 1
+    correct_answer = fizz_buzz(guess)
+    player_guess = input("fizz, buzz, fizz buzz, or number: ")
+    if player_guess != fizz_buzz(guess):
+        print("Wrong!! it should be {}".format(fizz_buzz(guess)))
+        break
+else:
+    print("Congrats! You are sharp!")

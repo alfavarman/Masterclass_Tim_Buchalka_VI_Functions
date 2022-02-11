@@ -98,3 +98,18 @@ def factorial(number: int) -> int:
             result = result +(result * i)
         return result
 
+
+def sum_numbers(*numbers: float) -> float:
+    """
+    Calculate sum of numbers
+    :param numbers: int or float
+    :return: sum result as float
+    """
+    # return sum(numbers) # ver 1
+    # or
+    result = 0              # ver 2
+    for n in numbers:
+        result += n
+    return result
+
+

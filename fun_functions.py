@@ -113,3 +113,14 @@ def sum_numbers(*numbers: float) -> float:
     return result
 
 
+def print_color(text: str, *effects: str) -> None:
+    """
+    Print text in selected ANSI effect.
+
+    :param text: text to be printed.
+    :param effects: ANSI effects
+    """
+    effect = "".join(effects)
+    output_string = '{0}{1}{2}'.format(effect, text, RESET)
+    print(output_string)
+

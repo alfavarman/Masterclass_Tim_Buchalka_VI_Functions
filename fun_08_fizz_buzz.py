@@ -27,12 +27,27 @@ def fizz_buzz(number: int) -> str:
 
 
 for i in range(1, 100):
-    print(fizz_buzz(i))
+    answer = input("For {} fizz, buzz, fizz buzz or {}?: "
+                   .format(i, i))
+    if answer != fizz_buzz(i):
+        print("Wrong! For {} correct is {}"
+              .format(i, fizz_buzz(i)))
+        break
+    else:
+        print("Congrats! Try Again:")
 
-# buzz for number divisible by 5
-# fizz buzz for number divisible by 3 and 5
-# number for number not divisible by either
-# annotate and Docstring
-# include for loop to check in range 1 to 100
 
 
+#   Computer Guess with Player
+# guess = 0
+# while guess < 101:
+#     guess += 1
+#     print(fizz_buzz(guess))
+#     guess += 1
+#     correct_answer = fizz_buzz(guess)
+#     player_guess = input("fizz, buzz, fizz buzz, or number: ")
+#     if player_guess != fizz_buzz(guess):
+#         print("Wrong!! it should be {}".format(fizz_buzz(guess)))
+#         break
+# else:
+#     print("Congrats! You are sharp!")

@@ -42,14 +42,14 @@ def banner(text: str = "", screen_width: int = 80, design: str = "*") -> None:
     Printed Banner is created around `text`, in defined `screen_width`
     `design` ed character.
     NOTE each line is separate. Can't use \"""\"""
+
     :param text: string to be printed, default len 76 characters
     :param screen_width: int default is 80
     :param design: str default is '*'
-    :return:
+    raises ValueError: if string longer than screen_with -4
     """
     if len(text) > screen_width - 4:
-        print("Nah! max {0} char per line,\n"
-              "please use big_banner(str) function".format(screen_width))
+        raise ValueError("String: {0} is longer than specified width".format(screen_width))
     elif text == design:
         print(design * screen_width)
     else:

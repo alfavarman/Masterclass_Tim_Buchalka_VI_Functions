@@ -1,9 +1,10 @@
-def fibonacci_numbers(n=100):
+def fibonacci_numbers(n: int) -> int:
     """
     return fibonacci numbers for n' range.
     n must be positive int. default n is 100.
     NOTE fibonacci n = 10 is 55. N is range of indexes.
-    :param n is range for which fibonacci numbers are calculated
+
+    :param n: int is range for which fibonacci numbers are calculated
     :return: fibonacci numbers for n' range
     """
     if 0 <= n <= 1:
